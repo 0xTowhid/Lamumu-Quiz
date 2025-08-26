@@ -8,43 +8,17 @@
 </head>
 <body>
     <div class="container">
-        <!-- Login Screen -->
-        <div id="loginScreen">
+        <!-- Start Screen -->
+        <div id="startScreen">
             <div class="logo"><img class="logo-img" src="lamumu.jpg" alt="Lamumu-logo" width="100px"></div>
             <h1 class="brand-title">Lamumu X Common Quiz Site</h1>
             <p class="subtitle">Made with care by <a href="https://x.com/0xTowhid" target="_blank">Towhid</a></p>
             
-            <!-- <div class="backing-info">
-                🚀 Backed by Common.xyz with $20M funding
-            </div> -->
+            <p style="margin-bottom: 20px; color: #666; font-size: 1.1em;">
+                Total 15 Moo-estions • 15 seconds each 
+            </p>
             
-            <div class="login-form">
-                <div class="input-group">
-                    <label for="twitterHandle">Enter your Twitter/X handle:</label>
-                    <input type="text" id="twitterHandle" placeholder="@username" maxlength="15">
-                </div>
-                
-                <div class="input-group">
-                    <label for="profilePic">Upload Profile Picture (Optional):</label>
-                    <input type="file" id="profilePic" accept="image/*" style="padding: 10px;">
-                    <small style="color: #666; display: block; margin-top: 5px;">
-                        Add your photo only if you want to download your certficate
-                    </small>
-                </div>
-                
-                <div class="profile-preview" id="profilePreview" style="display: none; margin: 15px 0; text-align: center;">
-                    <img id="previewImg" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #667eea;">
-                    <div style="margin-top: 10px;">
-                        <button type="button" onclick="removeProfilePic()" style="background: #ff6b6b; color: white; border: none; padding: 5px 10px; border-radius: 15px; font-size: 0.9em; cursor: pointer;">Remove</button>
-                    </div>
-                </div>
-                
-                <p style="margin-bottom: 20px; color: #666; font-size: 0.9em;">
-                  Total 15 Moo-estions • 15 seconds each 
-                </p>
-                
-                <button class="btn" onclick="startQuiz()">Click me to enter</button>
-            </div>
+            <button class="btn" onclick="startQuiz()">Click me to enter</button>
         </div>
 
         <!-- Quiz Screen -->
@@ -59,52 +33,27 @@
                 </div>
             </div>
             
-            <div id="questionContainer">
-                
-            </div>
+            <div id="questionContainer"></div>
             
             <button class="btn" id="nextBtn" onclick="nextQuestion()" disabled style="display: none;">Next Moo-estion</button>
         </div>
 
         <!-- Results Screen -->
         <div id="resultsScreen" class="results-container">
-            <div class="tier-badge" id="tierEmoji"></div>
             <h2 class="tier-title" id="tierTitle"></h2>
             <div class="motivational-quote" id="motivationalQuote"></div>
             
             <div class="score-summary">
                 Final Score: <span id="finalScore"></span>/15 correct answers
             </div>
-
-            <div class="card-preview">
-                <div class="card-content">
-                    <div class="profile-section">
-                        <div class="profile-pic" id="cardProfilePic">👤</div>
-                        <div>
-                            <div style="font-size: 1.2em; font-weight: bold;" id="cardHandle"></div>
-                            <div style="opacity: 0.8;">Lamumu Quiz Champion</div>
-                        </div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 2em; margin-bottom: 10px;" id="cardEmoji"></div>
-                        <div style="font-size: 1.5em; font-weight: bold;" id="cardTitle"></div>
-                        <div style="margin-top: 10px; opacity: 0.9;" id="cardQuote"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="canvas-container">
-                <canvas id="resultCanvas" width="600" height="400"></canvas>
-            </div>
             
-            <button class="btn" onclick="downloadCard()">Download Moo Card </button>
             <button class="btn" onclick="shareOnX()">Share on X Moo</button>
             <button class="btn" onclick="restartQuiz()">Try Again Moo</button>
         </div>
     </div>
 
     <script src="index.js">
-      
+       
     </script>
 </body>
 </html>
